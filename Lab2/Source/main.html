@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Main Page</title>
+    <!--Mapquest CDN-->
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.1.0/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.1.0/mapquest.css"/>
+    <!--Google Map API CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWhSE1HAi753_M8rcFTfcbBXUQInf8y6c&v=3.exp&sensor=true"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR924KH0p6IDMCsOaG5rMmEo17JSl5K2U&libraries=places"></script>
+    <!--BootStrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        #startlocation
+        {
+            margin-left: 30px;
+            height: 30px;
+            width: 500px;
+        }
+        #map
+        {
+            margin-left: 30px;
+            margin-right: 30px;
+            width: 600px;
+            height: 530px;
+        }
+        #mainFrame
+        {
+            margin-left: 550px;
+            margin-top: 100px;
+            border-color: red;
+
+        }
+        #instructions
+        {
+            margin-left: 200px;
+            font-family: "Arial Black";
+        }
+        #nameTitle
+        {
+
+            font-family: "Arial";
+            font-size: 25px;
+            color: darkblue;
+
+        }
+
+
+    </style>
+    <script type="text/javascript">
+
+
+
+        var map;
+        var input;
+        var autocomplete;
+        window.onload = function() {
+            L.mapquest.key = 'EQKahFkQ73vIl5k0uoqE6tLTAfGZFUzU';
+
+            input = document.getElementById('startlocation');
+            autocomplete = new google.maps.places.Autocomplete(input);
+
+            map = L.mapquest.map('map', {
+                center: [0, 0],
+                layers: L.mapquest.tileLayer('map'),
+                zoom: 14
+            });
+
+
+            L.mapquest.geocoding().geocode('New York, NY, United States');
+            map.addLayer(L.mapquest.trafficLayer());
+            map.addLayer(L.mapquest.incidentsLayer());
+            map.addLayer(L.mapquest.marketsLayer());
+
+        }
+
+        function updateMap()
+        {
+
+            var g = input.value;
+            L.mapquest.geocoding().geocode(g);
+        }
+
+
+
+    </script>
+</head>
+
+
+<div id="mainFrame">
+    <div id="nameTitle"></div>
+    <script>
+        document.getElementById("nameTitle").innerHTML = "Welcome to Main Page " + localStorage.getItem('name');
+    </script>
+    <div class="row">
+        <input type="text"  id="startlocation" autocomplete="off" />
+        <button type="button" class="btn btn-success" onclick="updateMap()" id="btn">Show Location</button>
+        <br/></br>
+    </div>
+
+    <div id="map">
+
+    </div>
+    <p id="instructions">Enter a location and click "Show Location"</p>
+</div>
+</body>

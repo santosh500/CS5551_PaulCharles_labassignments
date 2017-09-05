@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <!--BootStrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-color: #6415d3;
+        }
+        #mainDiv
+        {
+            padding: 200px;
+        }
+        #mainTitle
+        {
+            color: white;
+            text-align: center;
+        }
+        #royal
+        {
+            width: 500px;
+            height: 360px;
+            border-color: red;
+            transform: rotate(90deg);
+            align-items: center;
+        }
+        #mainAudio
+        {
+           margin-left: 500px;
+            margin-bottom: 200px;
+        }
+        h1
+        {
+            color: white;
+        }
+    </style>
+
+    <title>Home Page</title>
+</head>
+<body>
+    <h1 id="mainTitle">Welcome to Home Page</h1>
+    <div id="mainDiv">
+        <img src="royalsPic.jpg" id="royal"/>
+        <video width="400" height="300" controls>
+            <source src="sportingVideo.mp4" type="video/mp4">
+        </video>
+        <div id="mainAudio">
+        <h1>Main Song Audio</h1>
+        <audio controls >
+            <source src="mainSong.mp3" type="audio/mpeg">
+        </audio>
+        </div>
+    </div>
+</body>
+</html>

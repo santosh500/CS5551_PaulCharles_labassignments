@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--BootStrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+</head>
+<body>
+
+<p>Name: <input type="text" id="tName" value="Name" ></p>
+<p>Username: <input type="text" id="tUN" value="username" ></p>
+<p>Password: <input type="password" id="tPass" value="password" ></p>
+<p>Birth Date: <input type="date" id="bday" value="username" ></p>
+<input class="btn btn-success" type="submit" value="Submit" onclick="subReg(); location.href='login.html'">
+
+<script>
+    // Check browser support
+    if (typeof(Storage) !== "undefined") {
+        // Store
+
+        // Retrieve
+        function  subReg() {
+
+            var name = document.getElementById("tName");
+            var un = document.getElementById("tUN");
+            var pass = document.getElementById("tPass");
+            localStorage.setItem('name', name.value);
+            localStorage.setItem('un', un.value);
+            localStorage.setItem('pass', pass.value);
+        }
+
+
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+
+</script>
+
+
+</body>
+
+
+</html>

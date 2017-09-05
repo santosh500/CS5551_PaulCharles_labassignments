@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--BootStrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+
+
+    <script>
+        function verifyLogin()
+        {
+            var val = document.getElementById("username");
+            var pass = document.getElementById("password");
+            if(localStorage.getItem('un') === val.value && localStorage.getItem('pass') === pass.value)
+            {
+                location.href='main.html'
+            }
+            else
+            {
+                document.getElementById("loginError").innerHTML = "Error in Login. Please use input correct Username and Password or Register an account";
+            }
+        }
+
+    </script>
+
+    <style>
+
+        #mainContent
+        {
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="mainContent">
+<br><b>Please Login:</b><br><br>
+Login: <input id="username" /><br><br>
+Password: <input id="password" /><br><br>
+<button onclick="verifyLogin()" class="btn btn-success" value="Login">Login</button><br><br>
+<button onclick="location.href='register.html'" class="btn btn-danger" value="Register">Register</button><br><br>
+<button onclick="location.href='home_official.html'" class="btn btn-info" >Main</button><br><br>
+<div id="loginError"></div>
+</div>
+</body>
+</html>
