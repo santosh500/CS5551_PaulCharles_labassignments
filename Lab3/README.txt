@@ -17,3 +17,5 @@ Bootstrap References (Alert): https://www.w3schools.com/jsref/met_win_alert.asp
 Bootstrap References (Input Type): https://www.w3schools.com/bootstrap/bootstrap_forms_inputs.asp, https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_input_height&stacked=h, http://jsfiddle.net/MeycD/
 
 Bootstrap References (CSS-border and radius): https://www.w3schools.com/cssref/css3_pr_border-radius.asp
+
+YouTube button: https://stackoverflow.com/questions/41142914/possible-to-remove-center-middle-red-youtube-play-button-form-iframe-embedded **Copyright by Google/YouTube. This is not my image
