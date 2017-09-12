@@ -14,6 +14,7 @@
     border-radius: 25px;
 }
 
+
 #googleInfo
 {
     padding: 20px;
@@ -21,7 +22,32 @@
     border-radius: 1px;
 }
 
-#loginBody
+#mashupForm
+{
+    margin-left: 500px;
+    margin-top: 50px;
+    margin-right: 400px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 25px;
+    font-family: Arial;
+}
+
+body
 {
     background-color: orangered;
+}
+
+h1
+{
+    font-family: Arial;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+}
+
+#ytImage
+{
+    width: 100px;
+    height: 80px;
 }
