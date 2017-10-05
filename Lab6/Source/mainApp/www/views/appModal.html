@@ -1,0 +1,71 @@
+<!--Adapted from original template from todoApp original template for CS5551 Tutorial 6 Source Code (todoApp)-->
+<div class="modal">
+  <ion-header-bar class="bar bar-header bar-royal">
+    <h1>Food Application <i class="icon icon ion-pizza"></i></h1>
+      <style>
+ion-content {
+    background-color: mediumvioletred;
+}
+          p{
+              color: white;
+          }
+          
+          h1{
+              color: darkred;
+              height: 50px;
+          }
+          table, th, td {
+            padding: 15px;
+              border: 1px solid white;
+}
+          th{
+                font-weight: bold;
+          }
+          
+</style>
+  </ion-header-bar>
+  <ion-content>
+
+      
+      <form ng-submit="addFood(food,location)">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="Please Enter a food" ng-model="food">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Please Enter a location" ng-model="location">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-energized">Display Food Results</button>
+      </div>
+    </form>
+        <table style="width:100%">
+          <tr>
+            <th>Top Google Search</th>
+            <th>Top Food Locations</th> 
+          </tr>
+            <tr>
+            <td>{{ count }}</td>
+            <td>{{ count7 }}</td> 
+          </tr>
+          <tr>
+            <td>{{ count1 }}</td>
+            <td>{{ count8 }}</td>
+          </tr>
+            <tr>
+            <td>{{ count2 }}</td>
+            <td>{{ count9 }}</td> 
+          </tr>
+          <tr>
+            <td>{{ count3 }}</td>
+            <td>{{ count10 }}</td>
+          </tr>
+        <tr>
+            <td>{{ count4 }}</td>
+            <td>{{ count11}}</td>
+          </tr>
+          
+        </table>
+  </ion-content>
+</div>
