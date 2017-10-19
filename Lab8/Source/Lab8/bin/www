@@ -1,0 +1,16 @@
+
+//This Code and Project Template is referenced and derived from: https://github.com/mschwarzmueller/nodejs-basics-tutorial
+//This codes helps execute the application on Ports via the Server
+var app = require('../app');
+var http = require('http')
+var mainPort = getPort(process.env.PORT || '8010');
+app.set('port', mainPort);
+var a = http.createServer(app);
+
+a.listen(mainPort);
+function getPort(val) {
+  var port = parseInt(val, 10);
+    return port;
+}
+
+

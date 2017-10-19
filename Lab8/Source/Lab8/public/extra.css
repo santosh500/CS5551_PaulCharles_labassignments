@@ -1,0 +1,10 @@
+body {
+  margin-left: 700px;
+  margin-top:200px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: purple;
+}
+
+a {
+  color: blue;
+}
