@@ -1,4 +1,6 @@
 //This Code and Project Template is referenced and derived from: https://github.com/mschwarzmueller/nodejs-basics-tutorial
+//This Code and Project Template is referenced and derived from: CS5551 Lab 8 Source Code
+//This class handles the code and logic
 var express = require('express');
 var router = express.Router();
 var request = require('request');
