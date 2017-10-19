@@ -1,4 +1,5 @@
 //This Code and Project Template is referenced and derived from: https://github.com/mschwarzmueller/nodejs-basics-tutorial
+//This Code and Project Template is referenced and derived from: CS5551 Lab 8 Source Code
 //This file defines the locations and paths of the application
 var logs = require('morgan');
 var path = require('path');
